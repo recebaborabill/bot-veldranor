@@ -22,7 +22,8 @@ setInterval(() => {
   fetch(`https://<SEU-SERVICO-RENDER-URL>`)
     .then(() => console.log("Ping enviado para manter o bot vivo!"))
     .catch(err => console.error("Erro ao enviar ping:", err));
-}, 280000);
+}, Math.floor(Math.random() * (40000 - 30000 + 1)) + 30000); // Intervalo aleatório entre 30s e 40s
+
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
 
