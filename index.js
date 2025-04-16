@@ -19,7 +19,7 @@ app.listen(PORT, () => {
 
 // Auto-ping para evitar o sono eterno no Render
 setInterval(() => {
-  fetch(`https://<SEU-SERVICO-RENDER-URL>`)
+  fetch(`https://bot-veldranor.onrender.com`)
     .then(() => console.log("Ping enviado para manter o bot vivo!"))
     .catch(err => console.error("Erro ao enviar ping:", err));
 }, Math.floor(Math.random() * (40000 - 30000 + 1)) + 30000); // Intervalo aleatório entre 30s e 40s
